@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Горизонтальні рухомі рядки з різними стилями тексту">
+    <meta name="author" content="Chernushenko">
+    <title>Горизонтальні біжучі рядки</title>
+    <style>
+        body {
+            background-color: #dda0dd; /* Світло-фіолетовий фон */
+        }
+        .line {
+            height: 50px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .bounce {
+            animation: bounce 4s infinite alternate;
+        }
+        @keyframes bounce {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100px); }
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .delay1 {
+            animation: move 10s linear infinite;
+        }
+        .delay2 {
+            animation: move 7s linear infinite;
+        }
+        @keyframes move {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Рядок 1: Текст коливається з боку в бік -->
+    <div class="line bold" style="background-color: lightblue;">
+        <div class="bounce">Сила думки рухає світ</div>
+    </div>
+
+    <!-- Рядок 2: Текст пробігає справа наліво та з'являється знову -->
+    <div class="line italic" style="background-color: lightgreen;">
+        <marquee direction="left">Технології змінюють наше життя</marquee>
+    </div>
+
+    <!-- Рядок 3: Текст пробігає зліва направо та зупиняється -->
+    <div class="line underline" style="background-color: lightcoral;">
+        <marquee direction="right" behavior="slide">Освіта відкриває нові горизонти</marquee>
+    </div>
+
+    <!-- Рядок 4: Текст з різними режимами запізнення -->
+    <div class="line uppercase" style="background-color: lightgoldenrodyellow;">
+        <div class="marquee delay1">Терпіння і праця все перемагають</div>
+    </div>
+
+    <!-- Рядок 5: Текст з різними режимами запізнення -->
+    <div class="line" style="background-color: lightgray;">
+        <div class="marquee delay2">Знання — ключ до успіху в майбутньому</div>
+    </div>
+
+</body>
+</html>

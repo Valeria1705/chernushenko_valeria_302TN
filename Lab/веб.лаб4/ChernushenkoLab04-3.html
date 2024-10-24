@@ -1,0 +1,98 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Вертикальні рухомі рядки з текстом та зображеннями">
+    <meta name="author" content="Chernushenko">
+    <title>Вертикальні біжучі рядки</title>
+    <style>
+        body {
+			background-color: #dda0dd; /* Світло-фіолетовий фон */
+        }
+		 
+        .line {
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            font-size: 20px;
+            display: flex;
+            align-items: center; /* Вертикальне вирівнювання по центру */
+            justify-content: center; /* Горизонтальне вирівнювання по центру */
+        }
+        .italic {
+            font-style: italic;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .bounce {
+            animation: bounceV 4s infinite alternate;
+        }
+        @keyframes bounceV {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+        .marqueeV {
+            height: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            display: block;
+            text-align: center; /* Центрування тексту в біжучому рядку */
+        }
+        @keyframes moveV {
+            from { transform: translateY(100%); }
+            to { transform: translateY(-100%); }
+        }
+        .moveUp {
+            animation: moveV 10s linear infinite;
+        }
+        .moveDown {
+            animation: moveDown 7s linear infinite;
+        }
+        @keyframes moveDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Рядок 1: Текст коливається вертикально -->
+    <div class="line italic" style="background-color: lightblue;">
+        <div class="bounce">Лотос — це водна рослина, відома своїми великими і красивими квітами. 
+		Лотос належить до родини лотосових (Nelumbonaceae). Найбільш поширені види — це індійський лотос (Nelumbo nucifera) 
+		і американський жовтий лотос (Nelumbo lutea). 
+		Лотос часто зустрічається в стоячих водах, таких як озера, ставки та річкові затоки.</div>
+    </div>
+
+    <!-- Рядок 2: Рисунки пробігають знизу вгору та з'являються знову -->
+    <div class="line" style="background-color: lightgreen;">
+        <div class="marqueeV moveUp">
+            <img src="images\лотос1.jpg" alt="Image 1" height="100"> 
+            <img src="images\лотос2.jpg" alt="Image 2" height="100">
+        </div>
+    </div>
+
+    <!-- Рядок 3: Рисунки пробігають згори донизу із зупинкою і вирівнюванням по центру -->
+<div class="line" style="background-color: lightcoral;">
+    <marquee direction="down" behavior="slide" style="text-align: center;"> 
+        <img src="images\ромашка.jpg" alt="Image 3" height="100">
+        <img src="images\троянда.jpg" alt="Image 4" height="100">
+    </marquee>
+</div>
+
+    <!-- Рядок 4: Текст з різними режимами запізнення -->
+    <div class="line uppercase" style="background-color: lightgoldenrodyellow;">
+        <div class="marqueeV moveUp">Ромашка — це трав'яниста рослина родини айстрових (Asteraceae). 
+		</div>
+    </div>
+
+    <!-- Рядок 5: Текст з різними режимами запізнення -->
+    <div class="line" style="background-color: lightpink;">
+        <div class="marqueeV moveDown">Троянда — це квіткова рослина родини розових (Rosaceae), відома своєю красою, 
+		ароматом і різноманіттям кольорів. 
+		</div>
+    </div>
+
+</body>
+</html>
+

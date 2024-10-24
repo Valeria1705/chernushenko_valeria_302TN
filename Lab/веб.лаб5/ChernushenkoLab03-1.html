@@ -1,0 +1,89 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Додавання зображення в HTML-код</title>
+	<style>
+        body {
+            background-image: url("image/backgrnd.gif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #330066;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 60%;
+            margin: 50px auto;
+            border-collapse: collapse;
+            background-color: #f9f9f9;
+        }
+        th, td {
+            border: 1px solid #330066;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #008080;
+            color: white;
+        }
+        td {
+            background-color: #e0f7f7;
+        }
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body bgcolor="#FFFFFF" text="#330066">
+    <p align="center">
+        <font color="#008080" size="7"><b>Розклад</b></font><br>
+        <font size="6"><i>занять на вівторок</i></font><br><br>
+    <table>
+        <tr>
+            <th>Час</th>
+            <th>Предмет</th>
+            <th>Викладач</th>
+            <th>Аудиторія</th>
+        </tr>
+        <tr>
+            <td>8:30 - 10:00</td>
+            <td>Математичний аналіз</td>
+            <td>Др. Іваненко О.О.</td>
+            <td>101</td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:45</td>
+            <td>Фізика</td>
+            <td>Проф. Петров В.В.</td>
+            <td>203</td>
+        </tr>
+        <tr>
+            <td>12:00 - 13:30</td>
+            <td>Програмування</td>
+            <td>Др. Коваленко А.С.</td>
+            <td>304</td>
+        </tr>
+        <tr>
+            <td>14:00 - 15:30</td>
+            <td>Англійська мова</td>
+            <td>Викл. Мельник Т.М.</td>
+            <td>102</td>
+        </tr>
+        <tr>
+            <td>15:45 - 17:15</td>
+            <td>Теорія ймовірностей</td>
+            <td>Др. Бойко С.В.</td>
+            <td>201</td>
+        </tr>
+    </table>
+        <img src="image/clock.jpg" alt="Годинник"><br><br>
+
+        <!-- Додаємо гіперпосилання на документ з понеділком -->
+        <a href="ChernushenkoLab05-1.html">Переглянути розклад на понеділок</a>
+    </p>
+</body>
+</html>

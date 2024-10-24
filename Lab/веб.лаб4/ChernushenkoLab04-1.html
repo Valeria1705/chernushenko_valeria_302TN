@@ -1,0 +1,36 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядок, що біжить</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Довільний фон сторінки */
+        }
+        .marquee-container {
+            background-color: #99ff00; /* Колір полоси */
+            height: 50px; /* Висота полоси */
+            width: 80%; /* Ширина полоси у відсотках (можна змінити на ціле число в пікселях) */
+            margin: 100px auto; /* Центрування полоси */
+            overflow: hidden;
+        }
+        .marquee {
+            color: #8b008b; /* Колір тексту */
+            font-family: Verdana, sans-serif; /* Тип шрифту */
+            font-size: 24px; /* Розмір шрифту */
+            font-weight: bold; /* Жирний текст */
+            font-style: italic; /* Курсив */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <marquee class="marquee" behavior="alternate">
+            ПРИКЛАД РЯДКА, ЩО БІЖИТЬ (коливання)
+        </marquee>
+    </div>
+
+</body>
+</html>
