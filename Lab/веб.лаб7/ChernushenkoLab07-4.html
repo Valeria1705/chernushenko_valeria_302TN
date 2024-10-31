@@ -1,0 +1,82 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення товару</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4c3;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #2e7d32;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #388e3c;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="process_order.php" method="post">
+        <h2>Форма замовлення товару</h2>
+        
+        <label>Номер банківського рахунку: <input type="text" name="account_number"></label>
+        
+        <label>Особистий номер користувача: <input type="text" name="user_id"></label>
+        
+        <label>Виберіть товари:</label>
+        <select name="products[]" multiple>
+            <option value="product1">Товар 1</option>
+            <option value="product2">Товар 2</option>
+            <option value="product3">Товар 3</option>
+            <option value="product4">Товар 4</option>
+        </select>
+        
+        <label>Коментарі:</label>
+        <textarea name="comments" rows="4"></textarea>
+        
+        <label>Вид оплати:</label>
+        <input type="radio" name="payment_type" value="cash"> Готівковий розрахунок
+        <input type="radio" name="payment_type" value="non-cash"> Безготівковий розрахунок
+        
+        <label>Додаткова інформація:</label>
+        <input type="checkbox" name="extra_info[]" value="balance"> Дані про залишки на рахунку
+        <input type="checkbox" name="extra_info[]" value="payments"> Список останніх виплат по рахунку
+        
+        <input type="submit" value="Надіслати замовлення">
+    </form>
+</body>
+</html>
+

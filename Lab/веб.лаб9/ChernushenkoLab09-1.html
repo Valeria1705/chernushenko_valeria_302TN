@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk"> 
+<head>
+    <meta charset="UTF-8">
+    <title>ChernushenkoLab09-1</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .h2style1 {
+            color: darkblue;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #e6f0ff; /* Світло-синій фон для стилю 1 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .h2style2 {
+            color: green;
+            font-size: 26px;
+            font-style: italic;
+            text-align: left;
+            background-color: #e9ffe6; /* Світло-зелений фон для стилю 2 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .h2style3 {
+            color: crimson;
+            font-size: 24px;
+            text-decoration: underline;
+            text-align: right;
+            background-color: #ffe6e6; /* Світло-червоний фон для стилю 3 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2:hover {
+            transform: scale(1.02); /* Збільшення при наведенні */
+        }
+    </style>
+</head>
+<body>
+    <h2 class="h2style1">Заголовок H2 - Стиль 1</h2>
+    <h2 class="h2style2">Заголовок H2 - Стиль 2</h2>
+    <h2 class="h2style3">Заголовок H2 - Стиль 3</h2>
+    <h2 class="h2style1">Ще один заголовок H2 - Стиль 1</h2>
+</body>
+</html>
+
+
+

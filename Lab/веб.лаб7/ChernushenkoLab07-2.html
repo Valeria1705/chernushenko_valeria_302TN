@@ -1,0 +1,96 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 - Використання елементів HTML форми</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form action="process_form.php" method="post">
+        <h2>Лабораторна робота №7</h2>
+        
+        <label>Ваше ім'я: <input type="text" name="name" maxlength="40"></label>
+        
+        <label>Ваша стать:</label>
+        <input type="radio" name="gender" value="male"> Чоловіча
+        <input type="radio" name="gender" value="female"> Жіноча
+        
+        <label>На якому курсі Ви навчаєтесь?</label>
+        <select name="course">
+            <option value="1">Перший</option>
+            <option value="2">Другий</option>
+            <option value="3">Третій</option>
+            <option value="4">Четвертий</option>
+            <option value="5">П'ятий</option>
+        </select>
+        
+        <label>Ваші навички:</label>
+        <input type="checkbox" name="skills" value="HTML" checked> HTML
+        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+        <input type="checkbox" name="skills" value="Python"> Python
+        
+        <label>Напишіть кілька слів про себе:</label>
+        <textarea name="about" rows="4"></textarea>
+        
+        <label>Прикріпіть файл:</label>
+        <input type="file" name="attachment">
+        
+        <div style="display: flex; justify-content: space-between;">
+            <input type="submit" value="Відправити">
+            <input type="reset" value="Очистити">
+        </div>
+    </form>
+</body>
+</html>
+
