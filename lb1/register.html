@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #87CEEB;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+            color: #87CEEB;
+        }
+        .container input,
+        .container select,
+        .container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мій особистий блог</h1>
+        <nav>
+            <a href="login.html">Вхід</a>
+            <a href="register.html">Реєстрація</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Реєстрація користувача</h2>
+        <form action="#" method="post">
+            <input type="text" name="surname" placeholder="Прізвище" required>
+            <input type="text" name="name" placeholder="Ім'я" required>
+            <input type="text" name="login" placeholder="Логін" required>
+            <select name="group" required>
+                <option value="" disabled selected>Навчальна група</option>
+                <option value="281">302TN</option>
+            </select>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <input type="password" name="confirm_password" placeholder="Підтвердження паролю" required>
+            <button type="submit">Зареєструватись</button>
+        </form>
+		<div style="text-align: center; margin-top: 20px;">
+            <a href="ChernushenkoLab10-1.htm" style="color: #87CEEB; text-decoration: none;">Перейти до сторінки ЛЗ1.10</a>
+        </div>
+    </div>
+    <footer>
+        © Всі права захищені.
+    </footer>
+</body>
+</html>

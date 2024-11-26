@@ -1,0 +1,50 @@
+body {
+    background-image: url('images/background.jpeg'); /* Шлях до фонового зображення */
+    background-size: cover;
+    font-style: italic; /* Стиль тексту курсив */
+    font-size: 18px; /* Розмір тексту */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Абзаци */
+p {
+    text-align: justify; /* Вирівнювання по ширині */
+    text-indent: 20px; /* Червоний рядок на початку абзаців */
+}
+
+/* Заголовок 1-го рівня */
+h1 {
+    font-weight: bold; /* Жирний шрифт */
+    text-align: center; /* Вирівнювання по центру */
+    color: #4B0082; /* Колір заголовка*/
+    font-style: normal; /* Нормальний стиль */
+}
+
+/* Стилі для посилань */
+a:link {
+    color: green; /* Колір не відвіданого посилання */
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkblue; /* Колір відвіданого посилання */
+    text-decoration: none;
+}
+
+a:hover {
+    color: red; /* Колір при наведенні курсора миші */
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue; /* Колір активного посилання */
+    text-decoration: none;
+}
+
+/* Форматування зображень */
+img {
+    display: block; /* Розташування зображення по центру */
+    margin: 0 auto; /* Відступ навколо зображення */
+    max-width: 100%; /* Адаптивність для різних розмірів екрану */
+}
